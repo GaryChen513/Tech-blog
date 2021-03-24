@@ -1,0 +1,9 @@
+{{>post-info post}}
+
+<ol>
+  {{#each post.comments as |comment|}}
+  <li>
+    {{> comment comment}}
+  </li>
+  {{/each}}
+</ol>
