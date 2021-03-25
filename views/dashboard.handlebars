@@ -2,7 +2,7 @@
   {{#each posts as |post|}}
   <li>
     <div class="d-flex justify-content-between">
-      <a href="/dashboard/{{post.id}}" class="text-dark">{{post.title}}</a>
+      <a href="/dashboard/post/{{post.id}}" class="text-dark">{{post.title}}</a>
       <p class="text-dark">{{format_date post.createdAt}}</p>
     </div>
   </li>
