@@ -7,11 +7,12 @@ const updatepost = async (event) => {
     window.location.toString().split('/').length - 1
   ];
 
-  const response = await fetch(`/api/post/${id}`, {
+  const response = await fetch(`/api/posts/${id}`, {
     method: 'PUT',
     body: JSON.stringify({
         title,
-        post_text
+        content,
+        
     }),
     headers: {
         'Content-Type': 'application/json'
@@ -25,4 +26,4 @@ const updatepost = async (event) => {
   }
 };
 
-document.querySelector('#update').addEventListener('submit', updatepost)
+document.querySelector('#update').addEventListener('click', updatepost)
