@@ -2,18 +2,18 @@
   {{#each posts as |post|}}
   <li>
     <div class="d-flex justify-content-between">
-      <a href="/dashboard/{{post.id}}">{{post.title}}</a>
-      <p>{{post.create_at}}</p>
+      <a href="/dashboard/{{post.id}}" class="text-dark">{{post.title}}</a>
+      <p class="text-dark">{{format_date post.createdAt}}</p>
     </div>
   </li>
+
   {{/each}}
 </ol>
 
-<div class="newPost">
+<div>
   <div class="d-flex justify-content-center">
     <button type="submit" class="btn btn-light"><a href="/dashboard/newpost">
-      New Post
-    </a></button>
+        New Post
+      </a></button>
   </div>
 </div>
-

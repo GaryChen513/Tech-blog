@@ -1,9 +1,9 @@
 
 <div class="card">
-  <div class="card-header ">
+  <div class="card-header">
     <div class="d-flex justify-content-between">
-      <a href="/post/{{id}}">{{title}}</a>
-      <p>posted by {{user.username}} on {{create_at}}</p>
+      <a href="/post/{{id}}" class="font-weight-bold text-dark">{{title}}</a>
+      <p>posted by {{user.name}} on {{format_date createdAt}}</p>
     </div>
   </div>
   <div class="card-body">

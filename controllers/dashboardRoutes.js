@@ -3,10 +3,10 @@ const { Post, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get("/", withAuth, async (req, res)=> {
-  try {
+  // try {
     const postData = await Post.findAll({
       where: {
-        user_id: req.session.user_id
+        user_id: req.session.user_id,
       },
     });
     
@@ -14,9 +14,13 @@ router.get("/", withAuth, async (req, res)=> {
 
     res.render('dashboard', {posts, logged_in: req.session.logged_in});
 
-  } catch (err) {
-    res.status(500).json(err)
-  }
+  // } catch (err) {
+  //   res.status(500).json(err)
+  // }
+});
+
+router.get("/newpost", withAuth, (req, res)=> {
+  res.render('newpost', {logged_in: req.session.logged_in});
 })
 
 
